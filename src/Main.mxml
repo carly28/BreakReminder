@@ -1,0 +1,59 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<s:WindowedApplication xmlns:fx="http://ns.adobe.com/mxml/2009"
+                       xmlns:s="library://ns.adobe.com/flex/spark"
+                       xmlns:mx="library://ns.adobe.com/flex/mx"
+					   creationComplete="initApp()"
+					   
+					   showStatusBar="false">
+	
+	<fx:Declarations>
+		<!-- Place non-visual elements (e.g., services, value objects) here -->
+	</fx:Declarations>
+	<fx:Script>
+		<![CDATA[
+		import flash.events.Event;
+		import flash.events.MouseEvent;
+		import mx.events.CloseEvent;
+		import flash.display.BitmapData;
+		import flash.utils.Timer; 
+		
+		import mx.controls.Alert;
+		import mx.collections.ArrayCollection;
+		
+		[Embed('assets/clockrunning.png')]
+		public static var ClockRun:Class;
+		
+		[Embed('assets/clockstopped.png')]
+		public static var ClockStop:Class;
+		
+		[Bindable]
+		public var hourChoices:ArrayCollection = new ArrayCollection(["0","1", "2", "3", "4", "5"]);		
+		[Bindable]
+		public var minChoices:ArrayCollection = new ArrayCollection(["00", "05", "10", "15", "20", "25", "30", "35","40", "45", "50", "55"]); 
+	
+		
+		include "Dock.as";
+		include "Timer.as";
+		include "Sounds.as";
+		
+		]]>
+		
+	</fx:Script>
+	
+	
+	<mx:VBox>
+		<s:Label text="Remind me to take a break after"/>
+		<mx:HBox>
+			<s:Label text="Hour"></s:Label>	<s:DropDownList id="hourInput" dataProvider="{hourChoices}" selectedIndex="1"></s:DropDownList> 
+			<s:Label text="Min"></s:Label>	<s:DropDownList id="minInput" dataProvider="{minChoices}" selectedIndex="0"></s:DropDownList>
+		</mx:HBox>
+	
+		<!--<s:Button id="mini" label="" width="300" height="250" icon="@Embed('assets/clock.png')"/>-->
+		
+		<s:Button id="mini" width="300" height="200" icon="@Embed('assets/clock.png')"/>
+		<s:Label id="curTime" width="300"></s:Label>
+	</mx:VBox>
+	
+	
+	
+</s:WindowedApplication>
