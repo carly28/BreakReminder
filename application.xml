@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<application xmlns="http://ns.adobe.com/air/application/3.1">
+  <id>BreakReminderv1.0</id>
+  <versionNumber>1.0</versionNumber>
+  <filename>BreakReminder v1.0</filename>
+  <name>BreakReminder v1.0</name>
+  <initialWindow>
+    <title>BreakReminder  v1.0</title>
+    <content>BreakReminder.swf</content>
+    <systemChrome>standard</systemChrome>
+    <transparent>false</transparent>
+    <visible>true</visible>
+    <minimizable>true</minimizable>
+    <maximizable>false</maximizable>
+    <resizable>false</resizable>
+  </initialWindow>
+  <!-- 
+	More options:
+	http://livedocs.adobe.com/flex/3/html/File_formats_1.html#1043413
+	-->
+  <icon>
+    <image48x48>icons/BreakReminder48.png</image48x48>
+  </icon>
+  <copyright>CMQ June2014 v1.0</copyright>
+  <versionLabel>v1.0</versionLabel>
+</application>
